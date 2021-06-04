@@ -97,7 +97,9 @@
     
     var dis=document.querySelector(".display")
     var tdd=document.querySelectorAll("td")
-    var disval=" "
+    
+
+    var inputValue=document.querySelector("#my-input")
     
     for(item of tdd){
       item.addEventListener("click",(e)=>{
@@ -119,6 +121,15 @@
         else if(t=="="){
           dis.value=eval(dis.value)
         }
+        else if(t=="del"){
+
+        
+
+inputValue.value=inputValue.value.substr(0,inputValue.value.length-1)
+
+    
+
+}
        else{
          dis.value+=t
        }
@@ -126,13 +137,9 @@
       })
     }
     
-      function backSpace(){
-        
-  var inputValue=document.getElementById('my-input')
-
-inputValue.value=inputValue.value.substr(0,inputValue.value.length-1)
+      
     
-}
+
     
     </script>
   </body>
